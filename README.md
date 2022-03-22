@@ -1,7 +1,7 @@
 # EngenhariaDeSoftware-2021-02
 
 Descrição:
-O sistema será responsável por gerenciar os empréstimos e reservas de exemplares de uma biblioteca. 
+O sistema será utilizado para gerenciar uma biblioteca, com os livros e exemplares disponíveis, os empréstimos e reservas realizadas.
 
 Tecnologias Utilizadas:
 - PHP  (backend) v8.0
