@@ -1,13 +1,8 @@
-#5 Fase Sprint 0
+Características ao descrever requisitos de projeto:
 
-Nomenclatura dos Requisitos:
-RF (Requisito Funcional)
-NF (Requisito Não Funcional)
-
-Regras para seguir:
- 
-- Os requisitos estão separados em requisitos funcionais e não funcionais 
-(qualidade);
-- O sistema deve possibilitar o cadastramento dos dados pessoais dos clientes;
-- O sistema deve emitir relatórios;
-
+    1. Todo requisito deve estar associado a um código composto de duas letras e um número. Para requisitos de usuário e de software as letras devem ser UR e SR, respectivamente.
+    2. Para requisitos de software, no início do código, deve estar presente RF- ou RNF- para requisitos funcionais e não funcionais respectivamente
+    3. Cada código deve ser único e deve estar associado a um único requisito, da mesma maneira que um requisito deve ser único e estar associado a um único código
+    4. Os requisitos devem ser descritos da maneira mais sucinta e objetiva possível, sem que falte informação ou algo desnecessário fique sobrando
+    5. O vocabulário utilizado deve ser fechado, de tal forma que os termos usados na descrição dos requisitos devem ser bem definidos em um glossário
+    6. Deve-se descrever um requisito por vez, sendo que para cada requisito deve haver uma descrição e cada descrição deve estar associada a apenas um requisito
