@@ -1,0 +1,13 @@
+#5 Fase Sprint 0
+
+Nomenclatura dos Requisitos:
+RF (Requisito Funcional)
+NF (Requisito Não Funcional)
+
+Regras para seguir:
+ 
+- Os requisitos estão separados em requisitos funcionais e não funcionais 
+(qualidade);
+- O sistema deve possibilitar o cadastramento dos dados pessoais dos clientes;
+- O sistema deve emitir relatórios;
+
