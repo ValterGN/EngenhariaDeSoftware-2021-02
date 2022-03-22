@@ -1,0 +1,28 @@
+#3 FaseSprint 0
+
+Descrição :
+A criação desse software é importante para todas as empresas que possuem um acervo físico!
+No caso desse software, será para gerenciamento de uma biblioteca, armazenando seus exemplares, e cadastrando os empréstimos realizados.
+
+Funcionalidade:
+O operador do sistema poderá cadastrar, visualizar, alterar e excluir livros e seus exemplares, assim como usuários da biblioteca.
+Poderão ser feitas requisições de emprestimo pelos usuários, com no máximo 3 livros por requisição, sendo que não deve ser possivel existir 2 ou mais requisições em aberto
+relacionadas a mesma pessoa.
+
+Tipos de usuários previstos para o sistema:
+Alunos (usuários)
+Professores (usuários)
+
+Estrutura diretório do projeto:
+index.html
+cadastro.php
+editar.php
+listar.php
+deletar.php
+(css) - pasta com arquivos
+(img) - pasta com imagens
+
+
+
+
+
