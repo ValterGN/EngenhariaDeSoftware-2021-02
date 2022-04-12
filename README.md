@@ -22,6 +22,6 @@ O administrador é responsável por gerenciar os livros e o cadastro dos bibliot
 
 Devem ser colocados na pasta Padrões adotados. Qualquer outra documentação deve ser colocada na pasta Documentação. O código fonte do projeto deve ser colocado na pasta BManager
 
-Para cada alteração dentro da pasta BManager, deve-se abrir uma branch com o mesmo nome da tarefa especificada no Kanban. Podem ocorrer vários commits dentro de uma branch, mas o merge da branch com a main pode ocorrer somente quando a funcionalidade tiver sido implementada por completo
+Para cada alteração dentro da pasta BManager, deve-se abrir uma branch. O nome da branch deve indicar o que está sendo implementado/alterado. Podem ocorrer vários commits dentro de uma branch, mas o merge da branch com a main pode ocorrer somente quando a funcionalidade tiver sido implementada por completo
 
 Os commits devem ser feitos toda vez que o desenvolvedor considerar que realizou uma alteração significativa no código. As mensagens do commit nesse caso devem resumir qual foi a alteração realizada. No caso de commits que não sejam referentes ao código, como um commit para  adicionar um diagrama de classes por exemplo, devem indicar que um arquivo foi modificado, sem indicar necessariamente o que foi alterado
