@@ -3,6 +3,11 @@ require_once("../Model/LeitorModel.php");
 
 class LeitorController{
     
+    /*
+    * Construtor da classe. Chama o método a ser executado
+    * $metodo: nome do método a ser executado
+    * return = null
+    */
     public function __construct($metodo){
         switch ($metodo) {
             case 'cadastraLeitor':
@@ -23,6 +28,10 @@ class LeitorController{
         }
     }
 
+    /*
+    * Método para cadastrar um leitor
+    * return = null
+    */
     public function cadastraLeitor(){
         //echo("chegou no cadastro de leitor");
         $objLeitorModel = new LeitorModel();
@@ -34,6 +43,10 @@ class LeitorController{
         $this->listaLeitores();
     }
 
+    /*
+    * Método para alterar um leitor
+    * return = null
+    */
     public function alteraLeitor(){
         //echo("chegou na alteração de leitor");
         $objLeitorModel = new LeitorModel();
@@ -46,6 +59,10 @@ class LeitorController{
         $this->listaLeitores();
     }
 
+    /*
+    * Método para deletar um leitor
+    * return = null
+    */
     public function deletaLeitor(){
         //echo("chegou na remoção de leitor");
         $objLeitorModel = new LeitorModel();
@@ -55,6 +72,10 @@ class LeitorController{
         $this->listaLeitores();
     }
 
+    /*
+    * Método para listar os leitores
+    * return = null
+    */
     public function listaLeitores(){
         //echo("chegou na listagem de leitores");
         $objLeitorModel = new LeitorModel();

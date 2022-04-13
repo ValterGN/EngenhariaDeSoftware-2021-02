@@ -24,6 +24,10 @@ class LeitorModel{
         $this->dataNasc = $dataNasc;
     }
 
+    /*
+    * Método para cadastrar um leitor
+    * return = null
+    */
     public function cadastraLeitor(){
         //echo("Entrou em LeitorModel/cadastraLeitor");
         //echo(" Nome: " . $this->nome);
@@ -37,6 +41,10 @@ class LeitorModel{
         $objConnection->executaQuery($sql);
     }
 
+    /*
+    * Método para alterar um leitor
+    * return = null
+    */
     public function alteraLeitor(){
         //echo("Entrou em LeitorModel/alteraLeitor");
         //echo(" Codigo: " . $this->codigo);
@@ -51,6 +59,10 @@ class LeitorModel{
         $objConnection->executaQuery($sql);
     }
 
+    /*
+    * Método para deletar um leitor
+    * return = null
+    */
     public function deletaLeitor(){
         //echo("Entrou em LeitorModel/deletaLeitor");
         //echo(" Codigo: " . $this->codigo);
@@ -62,6 +74,10 @@ class LeitorModel{
         $objConnection->executaQuery($sql);
     }
 
+    /*
+    * Método para listar os leitores
+    * retorna a lista de leitores
+    */
     public function listaLeitores(){
         //echo("Entrou em LeitorModel/listaLeitores");
 
