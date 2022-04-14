@@ -88,6 +88,20 @@ class LeitorModel{
         return $objConnection->retornaSelect($sql);
     }
 
+    /*
+    * Método para listar os leitores com um parâmetro de busca
+    * return = null
+    */
+    public function buscaLeitores($condicaoBusca){
+        //echo("Entrou em LeitorModel/buscaLeitores");
+
+        $sql = "select *from Leitor where id like '%".$condicaoBusca."%' or nome like '%".$condicaoBusca."%' or cpf like '%".$condicaoBusca."%' or DataNascimento like '%".$condicaoBusca."%'";
+        //echo("</br>SQL: " . $sql);
+        
+        $objConnection = new Connection();
+        return $objConnection->retornaSelect($sql);
+    }
+
 }
 
 ?>

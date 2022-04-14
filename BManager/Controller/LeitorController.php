@@ -22,6 +22,9 @@ class LeitorController{
             case 'listaLeitores':
                 $this->listaLeitores();
                 break;
+            case 'buscaLeitores':
+                $this->buscaLeitores();
+                break;
             default:
                 $this->listaLeitores();
                 break;
@@ -80,6 +83,16 @@ class LeitorController{
         //echo("chegou na listagem de leitores");
         $objLeitorModel = new LeitorModel();
         $listaLeitores = $objLeitorModel->listaLeitores();
+        require("../View/ListarLeitor.php");
+    }
+
+    /*
+    * Método para listar os leitores com um parâmetro de busca
+    * return = null
+    */
+    public function buscaLeitores(){
+        $objLeitorModel = new LeitorModel();
+        $listaLeitores = $objLeitorModel->buscaLeitores($_POST['txtBusca']);
         require("../View/ListarLeitor.php");
     }
 
