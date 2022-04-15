@@ -59,6 +59,30 @@ button{
     padding: 2px;
 }
 
+/*Estilo da class para o ReservaCadastro.php*/
+.txtReserva{
+	background:#433B79;
+	border-radius: 10px;
+	color: #ffffff;
+   
+    padding: 2px;	
+	width: 44%;
+
+}
+
+/*Estilo Form ReservaCadastro.php*/
+.formularioReserva{
+	background-color:#fff;
+	position:relative;
+	left:30%;
+	top:18%;
+	width:320px;
+	height:270px;
+	font-size:23px;
+	
+	border-collapse: separate;
+    border-spacing: 5;
+}
 
 
 
