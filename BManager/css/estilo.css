@@ -1,0 +1,134 @@
+/*Estilo da pagina Listar Leitor*/
+#txtListarLeitor{
+	text-align: center;
+	margin-left: auto;
+    margin-right: auto;
+    font-size: 33px;
+	/*espaçamento entre titulo e menu */
+	padding-bottom:28px;
+	padding-top:28px;
+}
+
+table{
+	font-family: arial, sans-serif;
+	width: 100%;  /*tamanho tabela*/
+	/*border: 2px solid black;*/
+	/*border-style: dotted;teste borda tracejada*/
+	
+	border-collapse: separate;
+    border-spacing: 5;
+}
+
+th, td{
+  background:#433B79;	
+  text-align: left;
+  padding: 8px;	
+  color:#fff;	
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  padding: 5px;
+}
+/*teste ocultar borda tablehead
+th{
+	border:hidden;
+}
+*/
+
+/*botao editar e excluir*/
+button{
+	border-radius: 12%;
+	background:#433B79;	
+	color:#ffffff;
+}
+
+.botaoEditar{
+	background-color: orange;
+	color:black;
+}
+
+.botaoExcluir{
+	background-color: red;
+}
+
+
+.txtBusca{
+	background:#433B79;
+	border-radius: 12px;
+	color: fff;
+    width: 20%;
+    padding: 2px;
+}
+
+
+
+
+
+/*Estilo da class Leitor Crud / Formulario Cadastro*/
+.formulario{
+	background-color:#fff;
+	position:relative;
+	left:37%;
+	top:18%;
+	width:320px;
+	height:270px;
+	font-size:23px;
+}
+
+
+/*Estilo ids do Formulario Cadastro*/
+#txtTitulo{
+	font-size: 33px;
+	/*espaçamento entre titulo e formulario */
+	padding-bottom:28px;
+
+}
+/*Estilo dos campos do formulario Cadastro Leitores*/
+
+.txt{
+	border-radius:10px;
+	font-size:18px;
+	color:#fff;
+	background-color:#433B79;
+	margin: 11px 0;
+}
+
+
+/*Estilo dos botoes Formulario Cadastro Leitores*/
+
+.botao{
+	border-radius:12px;
+	font-size:19px;
+	color:#fff;
+	background-color:#433B79;
+}
+/*Daqui pra baixo estilo do menu.php (navbar)   */
+body{
+font-family: arial, helvetica, sans-serif;
+font-size: 18px;
+}
+
+
+.nav-tabs{
+list-style:none;
+border:1px solid #c0c0c0;
+float:left;
+}
+
+.nav-tabs li{
+background:#433B79;
+position:relative;
+float:left;
+border-right:1px solid #c0c0c0;
+}
+
+.nav-tabs li a{color:#fff; text-decoration:none; padding:5px 10px; display:block;}
+
+.nav-tabs li a:hover{
+background:#C0D4F1;
+color:#000;
+-moz-box-shadow:0 3px 10px 0 #CCC;
+-webkit-box-shadow:0 3px 10px 0 #433B79;
+text-shadow:0px 0px 5px #fff;
+}
+
+
