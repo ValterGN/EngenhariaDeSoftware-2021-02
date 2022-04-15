@@ -25,6 +25,12 @@ class LeitorController{
             case 'buscaLeitores':
                 $this->buscaLeitores();
                 break;
+            case 'crudAlteraLeitor':
+                $this->buscaLeitorUnico($metodo);
+                break;
+            case 'crudExcluiLeitor':
+                $this->buscaLeitorUnico($metodo);
+                break;
             default:
                 $this->listaLeitores();
                 break;
@@ -94,6 +100,16 @@ class LeitorController{
         $objLeitorModel = new LeitorModel();
         $listaLeitores = $objLeitorModel->buscaLeitores($_POST['txtBusca']);
         require("../View/ListarLeitor.php");
+    }
+    /*
+    * Método para buscar um único leitor
+    * return = null
+    */
+    public function buscaLeitorUnico($metodo){
+        $objLeitorModel = new LeitorModel();
+        $funcao = $metodo;
+        $leitor = $objLeitorModel->buscaLeitorUnico($_POST['txtCodigo']);
+        require("../View/LeitorCRUD.php");
     }
 
 }

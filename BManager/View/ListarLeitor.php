@@ -29,18 +29,19 @@
 <!-- fim teste busca -->
 
 
-<form >
+<form action="LeitorController.php" method="POST">
 	<center><input type="text" name="txtBusca" class="txtBusca"></input>
-	<button>Buscar</button>
-	
-	<form action="https://google.com"><button> Inserir </button> </form>
-	<br>
-	<br>
-	<br>
+	<input type="text" name="funcao" id="funcao" value="buscaLeitores" hidden>
+	<button type="submit" name="btnBuscaLeitor">Buscar</button>
 
 </form>
 
+<form action="../View/LeitorCRUD.php" method="POST" style="display: inline">
+	<input type="text" name="funcao" id="funcao" value="insereLeitor" hidden>
+	<button type="submit" name="btnInsereLeitor"> Inserir </button>
+</form>
 
+<br> <br>
 
 <?php
 
@@ -66,8 +67,25 @@ while ($row = $listaLeitores->fetch_assoc()) {
 		 "<td>" .$row["DataNascimento"]. "</td>".
 	 
 		/* "<td> $botaoEdit </td>".*/
-		"<td style='background-color: white'> <form action='https://google.com'>  <button type='submit' class='botaoEditar'>  <i class='fa fa-pencil'></i> </button> </form> </td>".
-		"<td style='background-color: white'> <form action='https://google.com'>  <button type='submit' class='botaoExcluir'>  <i class='fa fa-remove'></i> </button> </form> </td>";
+		"<td style='background-color: white'> 
+			<form action='../Controller/LeitorController.php' method='POST'> 
+				<input type='text' name='funcao' id='funcao' value='crudAlteraLeitor' hidden> 
+				<input type='text' name='txtCodigo' id='txtCodigo' value='".$row["ID"]."' hidden> 
+				<button type='submit' class='botaoEditar'>  
+					<i class='fa fa-pencil'></i> 
+				</button>
+			</form> 
+		</td>
+
+		<td style='background-color: white'>
+			<form action='../Controller/LeitorController.php' method='POST'>
+				<input type='text' name='funcao' id='funcao' value='crudExcluiLeitor' hidden>
+				<input type='text' name='txtCodigo' id='txtCodigo' value='".$row["ID"]."' hidden> 
+				<button type='submit' class='botaoExcluir'>
+					<i class='fa fa-remove'></i>
+				</button>
+			</form>
+		</td>";
 		
 		
 	echo "</tr>";

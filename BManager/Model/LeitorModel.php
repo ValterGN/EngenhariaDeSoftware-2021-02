@@ -90,7 +90,8 @@ class LeitorModel{
 
     /*
     * Método para listar os leitores com um parâmetro de busca
-    * return = null
+    * $condicaoBusca: é a condição de busca usada para filtrar os leitores
+    * retorna a lista de leitores
     */
     public function buscaLeitores($condicaoBusca){
         //echo("Entrou em LeitorModel/buscaLeitores");
@@ -100,6 +101,20 @@ class LeitorModel{
         
         $objConnection = new Connection();
         return $objConnection->retornaSelect($sql);
+    }
+
+    /*
+    * Método para buscar os dados de um único leitor
+    * $codigo: é a condição de busca usada para filtrar os leitores
+    * retorna os dados leitor
+    */
+    public function buscaLeitorUnico($codigo){
+        $sql = "select *from Leitor where id = ".$codigo;
+        //echo("</br>SQL: " . $sql);
+        
+        $objConnection = new Connection();
+        $retorno = $objConnection->retornaSelect($sql);
+        return $retorno->fetch_assoc();
     }
 
 }

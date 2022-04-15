@@ -10,7 +10,7 @@
     <a class="nav-link" href="/loginBmananger/inicio.php">Home</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="/loginBmananger/inicio.php">Leitores</a>
+    <a class="nav-link" href="../Controller/LeitorController.php">Leitores</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="/loginBmananger/pagina1.php">Retiradas</a>

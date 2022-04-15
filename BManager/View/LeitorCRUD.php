@@ -20,17 +20,44 @@
 <?php include 'menu.php'; ?>
 </body>
 
+<?php
+
+if (isset($_POST['funcao'])){
+    $funcao = $_POST['funcao'];
+}
+
+?>
+
 <form action="../Controller/LeitorController.php" method="POST" class="formulario">
     <legend id="txtTitulo">Cadastro de Leitores </legend>
+    <input type="text" name="funcao" id="funcao" value="" hidden>
 	
-    <label>Id: </label> <input type="text" name="txtCodigo" id="txtCodigo" class="txt"> <br>
-    <label>Nome: </label> <input type="text" name="txtNome" id="txtNome" class="txt"> <br>
-    <label>CPF: </label> <input type="text" name="txtCpf" id="txtCpf" class="txt"> <br>
-    <label>Nascimento: </label> <input type="date" name="txtDataNasc" id="txtDataNasc" class="txt"> <br>
+    <?php
+        $valorNome = "";
+        $valorCPF = "";
+        $valorDataNasc = "";
 
-    <button name="btnSalvar"  id="btnSalvar"  class="botao"> <i class="fa fa-check"></i> Salvar</button>
-    <button name="btnAlterar" id="btnAlterar" class="botao"> <i class="fa fa-pencil"></i> Alterar</button>
-    <button name="btnExcluir" id="btnExcluir" class="botao"> <i class="fa fa-trash"></i> Excluir</button>
+        if($funcao != "insereLeitor"){
+            echo('<label>Id: </label> <input type="text" name="txtCodigo" id="txtCodigo" value="'.$leitor["ID"].'" class="txt" disabled> <br>');
+            $valorNome = $leitor["Nome"];
+            $valorCPF = $leitor["CPF"];
+            $valorDataNasc = $leitor["DataNascimento"];
+        }
+    ?>
+        
+    <label>Nome: </label> <input type="text" name="txtNome" id="txtNome" value="<?php echo($valorNome)?>" class="txt"> <br>
+    <label>CPF: </label> <input type="text" name="txtCpf" id="txtCpf" value="<?php echo($valorCPF)?>" class="txt"> <br>
+    <label>Nascimento: </label> <input type="date" name="txtDataNasc" value="<?php echo($valorDataNasc)?>" id="txtDataNasc" class="txt"> <br>
+
+    <span <?php if($funcao != 'insereLeitor'){echo(" hidden");}?>>
+        <button name="btnSalvar"  id="btnSalvar"  class="botao"> <i class="fa fa-check"></i> Salvar</button>
+    </span>
+    <span <?php if($funcao != 'crudAlteraLeitor'){echo(" hidden");}?>>
+        <button name="btnAlterar" id="btnAlterar" class="botao"> <i class="fa fa-pencil"></i> Alterar</button>
+    </span>
+    <span <?php if($funcao != 'crudExcluiLeitor'){echo(" hidden");}?>>    
+        <button name="btnExcluir" id="btnExcluir" class="botao"> <i class="fa fa-trash"></i> Excluir</button>
+    </span>
 </form>
 
 <script>
@@ -40,6 +67,7 @@
 
     function modificaFuncao(valor){
         document.getElementById("funcao").value = valor;
+        document.getElementById("txtCodigo").disabled = false;
 
     }
 </script>
