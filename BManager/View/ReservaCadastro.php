@@ -25,19 +25,40 @@
 	<br><br>
     <center><h2>Cadastro de Reservas</h2></center><br>
 
-    <form action="../Controller/ReservaController.php" method="POST" class="formularioReserva">
-    <input type="text" name="txtCodigo" id="txtCodigo" hidden>
-    <input type="text" name="funcao" id="funcao" value="" hidden>
-    <label>Código do leitor: </label> <input type="text" name="txtReserva" class="txtReserva">
-    <label>Livro 1: <input type="text" name="txtReserva" class="txtReserva"></label>
-    <label>Livro 2: <input type="text" name="txtReserva" class="txtReserva"> </label>
-    <label>Livro 3: <input type="text" name="txtReserva" class="txtReserva"> </label>
+    <?php
+    if ($metodo == "editaLeitor"){
+        $valorCodigo = $reserva['ID'];
+        $codigoLeitor = $reserva['ID_Leitor'];
+        $codigoLivro1 = $reserva['ID_Livro1'];
+        $codigoLivro2 = $reserva['ID_Livro2'];
+        $codigoLivro3 = $reserva['ID_Livro3'];
+
+    } else {
+        $valorCodigo = "";
+        $codigoLeitor = "";
+        $codigoLivro1 = "";
+        $codigoLivro2 = "";
+        $codigoLivro3 = "";
+    }
     
-    <br><br>
-    <button class="botao" type="submit" name="btnSalvar" id="btnSalvar">Cadastrar</button>
-    <button class="botao" type="submit" name="btnAlterar" id="btnAlterar">Alterar</button>
-    <button class="botao" type="submit" name="btnExcluir" id="btnExcluir">Excluir</button>
-    <button class="botao" type="submit">Concluir</button>
+    ?>
+
+    <form action="../Controller/ReservaController.php" method="POST" class="formularioReserva">
+        <input type="text" name="txtCodigo" id="txtCodigo" value="<?php echo($valorCodigo);?>" hidden>
+        <input type="text" name="funcao" id="funcao" value="" hidden>
+        <label>Código do leitor: </label> <input type="text" name="txtCodLeitor" value="<?php echo($codigoLeitor);?>" class="txtReserva">
+        <label>Livro 1: <input type="text" name="txtCodLivro1" value="<?php echo($codigoLivro1);?>" class="txtReserva"></label>
+        <label>Livro 2: <input type="text" name="txtCodLivro2" value="<?php echo($codigoLivro2);?>" class="txtReserva"> </label>
+        <label>Livro 3: <input type="text" name="txtCodLivro3" value="<?php echo($codigoLivro3);?>" class="txtReserva"> </label>
+    
+        <br><br>
+
+        <button class="botao" type="submit" name="btnSalvar" id="btnSalvar" <?php if($funcao == 'editaLeitor'){echo(" hidden");}?>>Cadastrar</button>
+        <button class="botao" type="submit" name="btnAlterar" id="btnAlterar" <?php if($funcao != 'editaLeitor'){echo(" hidden");}?>>Alterar</button>
+        <button class="botao" type="submit" name="btnExcluir" id="btnExcluir" <?php if($funcao != 'editaLeitor'){echo(" hidden");}?>>Excluir</button>
+        <button class="botao" type="submit" hidden>Concluir</button>
+    
+
     </form>
 </body>
 </html>
