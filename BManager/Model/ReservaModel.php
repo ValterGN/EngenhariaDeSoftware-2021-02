@@ -107,14 +107,8 @@ class ReservaModel{
     public function buscaReservas($condicaoBusca){
 
         $sql = "Select Reserva.ID, Leitor.Nome, Reserva.status, Reserva.dataAbertura 
-        from Reserva join Leitor on Reserva.ID_Leitor = Leitor.id 
-        where Reserva.ID = ".$condicaoBusca." 
-        or ID_Leitor = ".$condicaoBusca." 
-        or ID_Livro1 = ".$condicaoBusca." 
-        or ID_Livro2 = ".$condicaoBusca."
-        or ID_Livro3 = ".$condicaoBusca." 
-        or status like ".$condicaoBusca."
-        or dataAbertura = '".$this->dataAbertura."'";
+        from Reserva join Leitor on Reserva.ID_Leitor = Leitor.id
+        where Reserva.ID = ".$condicaoBusca;
         //echo("</br>SQL: " . $sql);
         
         $objConnection = new Connection();
