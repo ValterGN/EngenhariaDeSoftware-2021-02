@@ -26,7 +26,9 @@
     <center><h2>Cadastro de Reservas</h2></center><br>
 
     <?php
-    if ($metodo == "editaLeitor"){
+    $funcao = $_POST['funcao'];
+
+    if ($funcao == "editaLeitor"){
         $valorCodigo = $reserva['ID'];
         $codigoLeitor = $reserva['ID_Leitor'];
         $codigoLivro1 = $reserva['ID_Livro1'];
