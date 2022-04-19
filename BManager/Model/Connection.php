@@ -3,7 +3,7 @@
 class Connection{
     private $serverName = "localhost";
     private $userName = "root";
-    private $password = "123";
+    private $password = "";
     private $db = "BD_BMnager";
     private $conn = null;   
 

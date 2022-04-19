@@ -7,16 +7,16 @@
   <!-- Navbar menu -->
 <ul class="nav nav-tabs">
   <li class="nav-item">
-    <a class="nav-link" href="/loginBmananger/inicio.php">Home</a>
+    <a class="nav-link" href="../View/Home.php">Home</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="../Controller/LeitorController.php">Leitores</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="/loginBmananger/pagina1.php">Retiradas</a>
+    <a class="nav-link" href="#">Retiradas</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="/loginBmananger/pagina2.php">Reservas</a>
+    <a class="nav-link" href="../Controller/ReservaController.php">Reservas</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="#">Livros</a>
@@ -28,7 +28,7 @@
     <a class="nav-link" href="#">Bibliotecários</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" "fa fa-home" href="/loginBmananger/sair.php"> <i class="fa fa-sign-in"></i> Sair</a>
+    <a class="nav-link" "fa fa-home" href="#"> <i class="fa fa-sign-in"></i> Sair</a>
   </li>
 </ul>
   
